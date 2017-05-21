@@ -1,0 +1,298 @@
+/*Global Variables Section*/
+
+section
+{
+    border:1px solid #9466A4;
+    margin-left:5%;
+    margin-right:5%;
+}
+
+a, a:visited, a:active, a:hover
+{
+    text-decoration:none;
+}
+
+textarea {
+    width:300px;
+    height:100px;
+}
+
+input {
+    width:300px;
+}
+
+select {
+    width:300px;
+}
+
+table
+{
+    
+    margin:0 auto;
+}
+
+
+section table
+{
+    margin-left:0%;
+}
+
+nav
+{
+    text-align: center;
+}
+
+nav .button
+{
+    border:none;
+}
+
+footer
+{
+	display:block;
+	margin:0 auto;
+	text-align:center;
+}
+
+/*IDs and Classes*/
+
+#header 
+{
+    margin-left:5%;
+    border-left:1px solid #9466A4;
+    border-right:1px solid #9466A4;
+    border-top:1px solid #9466A4;
+    margin-right:5%;
+}
+
+#header a, a:visited, a:active
+{
+	margin-left:0%;
+}
+
+.msg 
+{
+    font-size:1.0em;
+    text-align:center;
+    color: #3D9970;
+    background-color:#DDDDDD;
+	padding-top:5px;
+    padding-bottom:5px;
+    width:40%;
+    margin-left:30%;
+    margin-right:30%;
+}
+
+.loggedin {
+    font-size:0.5em;
+    float:right;
+    color: #3D9970;
+    background-color:#DDDDDD;
+	padding-top:5px;
+    padding-bottom:5px;
+    padding-left:16px;
+    padding-right:16px;
+}
+
+.loggedin a{
+    color:#001f3f;
+    text-decoration:none;
+    cursor:pointer;
+}
+
+.loggedin a:visited{
+    color:#001f3f;
+    text-decoration:none;
+    cursor:pointer;
+}
+
+.loggedin a:hover{
+    color:#001f3f;
+		border-bottom: 1px dashed #3D9970;
+    cursor:pointer;
+}
+
+#logincont
+{
+    text-align:right;
+    margin-right:0.5%;
+    margin-top:0.5%
+}
+
+#login a, a:visited, a:active
+{
+    color:#9466A4;
+/*    text-align:right;*/
+    margin-right:0.5%;
+    margin-top:0.5%;
+}
+
+#login a:hover
+{
+    color:#5DB0FF;
+/*    text-align:right;*/
+    margin-right:0.5%;
+    margin-top:0.5%;
+}
+
+#loginform
+{
+/*    text-align:center;*/
+}
+
+#navlinks
+{
+    width:90%;
+    margin:0 auto;
+	padding-top:10px;
+	padding-bottom:10px;
+	background:#9466A4;
+}
+
+#navlinks a, a:active, a:visited
+{
+	color:white;
+    margin-left:40px;
+    margin-right:40px;
+    margin-bottom:40px;
+}
+
+#navlinks a:hover
+{
+    color:#F6CF2E;
+}
+
+.button
+{ 
+    font-size:1.2em;
+}
+
+#section
+{
+	width:90%;
+    margin-left:5%;
+    margin-right:5%;
+}
+
+#featuredVid
+{
+    display:inline;
+    width:50%;
+	float:left;
+}
+
+#featuredPro
+{
+    display:block;
+    width:50%;
+	height:400px;
+	float:left;
+}
+
+#featuredPro img
+{
+    padding-right:5px;
+}
+
+#recVid
+{
+    width:100%;
+	display:inline;
+}
+
+#topCont
+{
+    width:100%;
+	display:block;
+}
+
+#blogs
+{
+	width:40%;
+	display:inline-block;
+	float:left;
+}
+
+#adsMid
+{
+	width:30%;
+	display:inline-block;
+	float:left;
+}
+
+#twitter
+{
+	display:block;
+	width:30%;
+	float:left;
+}
+
+#blank
+{
+	display:inline-block;
+	width:100%;
+}
+
+#advertisers
+{
+    width:98%;
+	display:block;
+	text-align:center;
+    margin:0 auto;
+	margin-top:10px;
+	margin-bottom:10px;
+/*	border:1px solid black;*/
+}
+
+.lviews {
+    text-align:left;
+    width:300px;
+    font-weight:bold;
+}
+
+.lview {
+/*    background-color:white;*/
+    text-align:left;
+    width:300px;
+}
+
+.lview a, a:visited, a:active {
+    color:mediumpurple;
+}
+
+.lview a:hover {
+    color:purple;
+}
+
+.llview {
+/*    background-color:white;*/
+    text-align:right;
+    width:300px;
+}
+
+#footlinks
+{
+	width:90%;
+	padding-top:10px;
+	padding-bottom:10px;
+	background:#9466A4;
+	margin:0 auto;
+}
+
+#footlinks a, a:active, a:visited
+{
+	color:white;
+	margin-left:15px;
+	margin-right:15px;
+}
+
+#footlinks a:hover
+{
+    color:#F6CF2E;
+}
+
+#copyright
+{
+	margin-top:10px;
+	margin-bottom:10px;
+}

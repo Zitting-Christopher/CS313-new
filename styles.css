@@ -1,0 +1,196 @@
+body
+{
+	font-family:"Palatino Linotype", "Book Antiqua", Palatino, serif;
+}
+
+header
+{
+	text-align:center;
+	padding-top:50px;
+	padding-bottom:50px;
+	background:#203342;
+	color:#bdbdbd;
+	font-size:1.5em;
+	border-left:1px solid #203342;
+	border-right:1px solid #203342;
+}
+
+#hys
+{
+    text-align:left;
+    top:3%;
+    left:2%;
+    position:absolute;
+}
+
+#hys > a,a:hover,a:visited,a:active
+{
+    border:none;
+}
+
+nav
+{
+	background:#3D9970;
+	padding-top:10px;
+	padding-bottom:25px;
+	padding-left:45%;
+}
+
+li
+{
+	list-style:none;
+}
+
+.li
+{
+	background:#203342;
+	padding:10px;
+	width:100px;
+}
+
+section
+{
+  padding-left:5%;
+	border-left:1px solid #203342;
+	border-right:1px solid #203342;
+}
+
+.heading
+{
+	font-size:1.5em;
+}
+
+table
+{
+	margin:0 auto;
+	text-align:left;
+}
+
+.fyes
+{
+    font-weight:bold;
+}
+
+.fno
+{
+    font-style:italic;
+}
+
+.title
+{
+	font-weight:bold;
+	padding-left:10px;
+	padding-right:10px;
+/*	text-align:center;*/
+	margin:0 auto;
+	color:#203342;
+	font-size:1.2em;
+	border-bottom:1px dashed #203342;
+}
+
+.noborder
+{
+    font-weight:bold;
+    padding-left:5px;
+	padding-right:5px;
+	font-size:1.2em;
+    border-left:none;
+    border-right:none;
+	border-bottom:1px dashed #203342;
+	text-align:right;
+}
+
+.last
+{
+	text-align:right;
+	padding-left:5px;
+	padding-right:5px;
+	border-left:1px dashed #203342;
+	border-right:1px dashed #203342;
+}
+
+.week
+{
+	border-left:1px dashed #203342;
+	padding-left:5px;
+	padding-right:5px;
+    text-align:right;
+}
+
+.topic
+{
+	border-left:1px dashed #203342;
+	padding-left:5px;
+	padding-right:5px;
+    min-width:250px;
+}
+
+a, a:visited, a:active
+{
+	color:#3D9970;
+	text-decoration:none;
+}
+
+a:hover
+{
+	color:#bdbdbd;
+	text-decoration:none;
+	border-bottom:1px dotted #bdbdbd;
+}
+
+ /* Tooltip container */
+.tooltip {
+    position: relative;
+    display: inline-block;
+/*    border-bottom: 1px dotted black;  If you want dots under the hoverable text */
+}
+
+/* Tooltip text */
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: 120px;
+    background-color: #555;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    border-radius: 6px;
+
+    /* Position the tooltip text */
+    position: absolute;
+    z-index: 1;
+    bottom: 125%;
+    left: 50%;
+    margin-left: -60px;
+
+    /* Fade in tooltip */
+    opacity: 0;
+    transition: opacity 1s;
+}
+
+/* Tooltip arrow */
+.tooltip .tooltiptext::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #555 transparent transparent transparent;
+}
+
+/* Show the tooltip text when you mouse over the tooltip container */
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+    opacity: 1;
+}
+
+footer
+{
+	text-align:center;
+	padding-top:10px;
+	padding-bottom:10px;
+	background:#203342;
+	color:#bdbdbd;
+	border:1px solid #203342;
+}

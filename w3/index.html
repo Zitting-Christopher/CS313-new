@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>CS313 - Form</title>
+		<link rel="stylesheet" type="text/css" href="styles.css">
+    </head>
+    <body>
+        <h1>Student Registration</h1>
+        <form method="post" action="form.php">
+            <label for="name">Name:</label><input name="name" type="text"><br><br>
+            
+            <label for="email">Email:</label><input name="email" type="text"><br><br>
+            
+            Major: <br>
+                <input type="radio" id="cs" name="major" value="cs"> <label for="cs">Computer Science</label><br>
+            
+                <input type="radio" id="wdd" name="major" value="wdd"> <label for="wdd">Web Design and Development</label><br>
+                
+                <input type="radio" id="cit" name="major" value="cit"> <label for="cit">Computer Information Technology</label><br>
+                
+                <input type="radio" id="ce" name="major" value="ce"> <label for="ce">Computer Engineering</label><br><br>
+            
+            <label for="comments">Comments:</label><textarea name="comments"></textarea><br><br>
+            
+            Continents Visited: <br>
+            <input type="checkbox" name="continents[]" value="na"><label for="na">North America</label><br>
+            <input type="checkbox" name="continents[]" value="sa"><label for="sa">South America</label><br>
+            <input type="checkbox" name="continents[]" value="europe"><label for="europe">Europe</label><br>
+            <input type="checkbox" name="continents[]" value="asia"><label for="asia">Asia</label><br>
+            <input type="checkbox" name="continents[]" value="aus"><label for="aus">Australia</label><br>
+            <input type="checkbox" name="continents[]" value="africa"><label for="africa">Africa</label><br>
+            <input type="checkbox" name="continents[]" value="ant"><label for="ant">Antarctica</label><br>
+            
+            
+            <input type="submit" name="submit" value="Submit">
+        </form>
+    </body>
+</html>
