@@ -1,11 +1,4 @@
 <?php
-
-// Same as error_reporting(E_ALL);
-ini_set('error_reporting', E_ALL);
-
-// Report all PHP errors (see changelog)
-error_reporting(E_ALL);
-
 //Start Session
 session_start();
 
@@ -37,13 +30,21 @@ require_once('model/customer_db.php');
                 }
             }
         }
+        
+        if(isset($_POST['update']))
+        {
+            $username = $_SESSION['auth_username'];
+            
+            
+            header("Location:index.php?action=myaccount");
+        }
     }
 
     //Set GET variable
     $action = filter_input(INPUT_GET,'action', FILTER_DEFAULT);
 
     //Check if someone is trying to resend link but is not logged in
-    if(isset($_GET['action']) && $action == 'resend' && $_SESSION['auth_loggedin'] == 0))
+    if(isset($_GET['action'] && $action == 'resend' && $_SESSION['auth_loggedin'] == 0))
     {
         header("Location:index.php");
     }
@@ -102,6 +103,13 @@ require_once('model/customer_db.php');
                 {
                 ?>
                     <title>Underdog Idols - Label</title>
+                <?php
+                }
+                
+                if ($action == 'update')
+                {
+                ?>
+                    <title>Underdog Idols - Update User Account Info</title>
                 <?php
                 }
                 
@@ -208,6 +216,13 @@ require_once('model/customer_db.php');
                         
                         //Output some info to the user
                         echo '<br><div class="msg">You have been logged out.</div><br>';
+                        require_once('views/footer.php');
+                    }
+                    
+                    elseif ($action == 'update')
+                    {
+                         //Grab a few files
+                        require_once('views/update_user.php');
                         require_once('views/footer.php');
                     }
                     

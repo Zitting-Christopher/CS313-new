@@ -223,7 +223,6 @@ else
         <tr>
             <td class="llview"> </td>
             <td class="lview"><input type="submit" value="Register"></td>
-            <input type="hidden" name="register" value="register">
         </tr>
     </table>
 </form>
