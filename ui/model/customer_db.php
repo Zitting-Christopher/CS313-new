@@ -44,21 +44,6 @@ function registerUser($type,$username,$password,$email,$fname,$lname,$age,$gende
     $statement->closeCursor();
 }
 
-function updateUser($username,$phone,$genre,$bio,$audition){
-    global $db;
-    $query = 'UPDATE users
-    SET phone = :phone, genre = :genre, bio = :bio, audition = :audition
-    WHERE username = :username';
-    $statement = $db->prepare($query);
-    $statement->bindValue(":username", $username);
-    $statement->bindValue(":phone", $phone);
-    $statement->bindValue(":genre", $genre);
-    $statement->bindValue(":bio", $bio);
-    $statement->bindValue(":audition", $audition);
-    $statement->execute();
-    $statement->closeCursor();
-}
-
 function verifyLogin($username){
     global $db;
     $query = 'SELECT * FROM users
