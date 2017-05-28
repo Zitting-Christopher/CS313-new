@@ -252,7 +252,7 @@ require_once('model/customer_db.php');
                         if(isset($_SESSION['auth_username']))
                         {
                             //Grab a few files
-                            echo '<br><div class="msg">Howdy there, '.$_SESSION['auth_username'].'! Welcome to your Underdog Idols Account Management.<br>';
+                            echo '<br><div class="msg">Howdy there, '.$_SESSION['auth_username'].'! Welcome to your Underdog Idols Account Management.</div><br>';
                             require_once('views/update_user.php');
                             require_once('views/footer.php');
                             
