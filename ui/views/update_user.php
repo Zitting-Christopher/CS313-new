@@ -2,6 +2,8 @@
 
 //Grab some dependencies
 require_once('model/customer_db.php');
+require_once('class/class.phpmailer.php');
+require_once('model/customer_db.php');
 
 //Set POST variables
 $username = $_SESSION['auth_username'];
