@@ -43,7 +43,7 @@ require_once('model/customer_db.php');
     $action = filter_input(INPUT_GET,'action', FILTER_DEFAULT);
 
     //Check if someone is trying to resend link but is not logged in
-    if(isset($_GET['action']) && $action == 'resend' && $_SESSION['auth_loggedin'] == 0)
+    if(isset($_GET['action']) && $action == 'resend' && $_SESSION['auth_loggedin'] == 0))
     {
         header("Location:index.php");
     }
