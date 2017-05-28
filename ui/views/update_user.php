@@ -5,10 +5,10 @@ require_once('model/customer_db.php');
 
 //Set POST variables
 $username = $_SESSION['auth_username'];
-$phone = filter_input(INPUT_POST,'user_phone',FILTER_SANITIZE_NUMBER_INT);
-$genre = filter_input(INPUT_POST,'user_genre');
-$bio = filter_input(INPUT_POST,'user_about');
-$audition = filter_input(INPUT_POST,'user_audvid',FILTER_SANITIZE_URL);
+@$phone = filter_input(INPUT_POST,'user_phone',FILTER_SANITIZE_NUMBER_INT);
+@$genre = filter_input(INPUT_POST,'user_genre');
+@$bio = filter_input(INPUT_POST,'user_about');
+@$audition = filter_input(INPUT_POST,'user_audvid',FILTER_SANITIZE_URL);
 
 ////Process Registration
     if (isset($_POST['update']))
