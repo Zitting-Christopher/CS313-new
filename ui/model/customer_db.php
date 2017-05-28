@@ -56,6 +56,18 @@ function verifyLogin($username){
     return $user;
 }
 
+function getInfoForResend($username){
+    global $db;
+    $query = 'SELECT email,fname,string FROM users
+            WHERE username = :user
+            AND verified = 0';
+    $statement = $db->prepare($query);
+    $statement->bindValue(":user", $username);
+    $statement->execute();
+    $user = $statement->fetchAll();
+    $statement->closeCursor();
+    return $user;
+}
 
 function getUserByString($string){
     global $db;

@@ -36,6 +36,12 @@ require_once('model/customer_db.php');
     //Set GET variable
     $action = filter_input(INPUT_GET,'action', FILTER_DEFAULT);
 
+    //Check if someone is trying to resend link but is not logged in
+    if(isset($_GET['action'] && $action == 'resend' && $_SESSION['auth_loggedin'] == 0))
+    {
+        header("Location:index.php");
+    }
+
 ?>
 <!DOCTYPE HTML>
 <html>
@@ -62,6 +68,13 @@ require_once('model/customer_db.php');
                 {
                 ?>
                     <title>Underdog Idols - Register</title>
+                <?php
+                }
+                
+                if ($action == 'resend')
+                {
+                ?>
+                    <title>Underdog Idols - Resend Verification</title>
                 <?php
                 }
                 
@@ -155,6 +168,14 @@ require_once('model/customer_db.php');
                     {
                          //Grab a few files
                         require_once('views/register.php');
+                        require_once('views/footer.php');
+                    }
+                    
+                    //If we are trying to resend verification link
+                    if ($action == 'resend')
+                    {
+                         //Grab a few files
+                        require_once('views/resend.php');
                         require_once('views/footer.php');
                     }
                     

@@ -3,13 +3,13 @@
 //Send a verification email at registration
 function sendVerification($fname,$address,$string)
 {
-    //Email the file to Josh
+    //Create the email
     $email = new PHPMailer();
     $email->isHTML(true);
     $email->From      = 'noreply@underdogidols.com';
     $email->FromName  = 'Underdog Idols User Registration';
     $email->Subject   = 'Please verify your email to activate your account';
-    $email->Body      = $fname.',<br>Thank you for registering with Underdog Idols. Please verify your email address by clicking <a href="https://dev.underdogidols.com/index.php?verify='.$string.'">here</a>. Alternatively, you can copy and paste the following link into your browser to verify your email address: https://dev.underdogidols.com/index.php?verify='.$string.' <br>Regards,<br>Underdog Idols Team';
+    $email->Body      = $fname.',<br>Thank you for registering with Underdog Idols. Please verify your email address by clicking <a href="https://infinite-cliffs-95055.herokuapp.com/index.php?verify='.$string.'">here</a>. Alternatively, you can copy and paste the following link into your browser to verify your email address: https://infinite-cliffs-95055.herokuapp.com/index.php?verify='.$string.' <br>Regards,<br>Underdog Idols Team';
     
     $email->AddAddress($address);
     $email->AddAddress('chris@hostyour.space');

@@ -61,7 +61,7 @@ $audition = filter_input(INPUT_POST,'user_audvid',FILTER_SANITIZE_URL);
 
 
                 //Send verification email
-    //                sendVerification($fname,$email,$string);
+                    sendVerification($fname,$email,$string);
 
                 //Notify the user what happened
                 echo '<br><div class="msg">User registration pending. Please check your email to verify your account.</div><br>';
@@ -202,7 +202,7 @@ else
         </tr>
         <tr>
             <td class="llview">Underdog Idols Audition link: </td>
-            <td class="lview"><input type="text" name="user_audvid" placeholder="e.g. youtube.com/watch?v=v7MGUNV" required></td>
+            <td class="lview"><input type="text" name="user_audvid" placeholder="Text after 'v=' in youtube url" required></td>
         </tr>
         <tr>
             <td class="llview">Username: </td>
@@ -214,7 +214,7 @@ else
         </tr>
         <tr>
             <td class="llview">Password: </td>
-            <td class="lview"><input type="password" name="user_pass" placeholder="Reqs: 1 upper, 1 lower, 1 spec char, 8 chars" required></td>
+            <td class="lview"><input type="password" name="user_pass" placeholder="1 upper, 1 lower, 1 spec char, 8 chars" required></td>
         </tr>
         <tr>
             <td class="llview">Verify Password: </td>
