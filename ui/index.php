@@ -105,6 +105,13 @@ require_once('model/customer_db.php');
                 <?php
                 }
                 
+                if ($action == 'update')
+                {
+                ?>
+                    <title>Underdog Idols - Update User Account Info</title>
+                <?php
+                }
+                
                 if ($action == 'logout')
                 {
                     //Get rid of session info
@@ -208,6 +215,13 @@ require_once('model/customer_db.php');
                         
                         //Output some info to the user
                         echo '<br><div class="msg">You have been logged out.</div><br>';
+                        require_once('views/footer.php');
+                    }
+                    
+                    elseif ($action == 'update')
+                    {
+                         //Grab a few files
+                        require_once('views/update_user.php');
                         require_once('views/footer.php');
                     }
                     
