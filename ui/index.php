@@ -30,6 +30,14 @@ require_once('model/customer_db.php');
                 }
             }
         }
+        
+        if(isset($_POST['update']))
+        {
+            $username = $_SESSION['auth_username'];
+            
+            
+            header("Location:index.php?action=myaccount");
+        }
     }
 
     //Set GET variable
