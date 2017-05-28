@@ -44,6 +44,21 @@ function registerUser($type,$username,$password,$email,$fname,$lname,$age,$gende
     $statement->closeCursor();
 }
 
+function updateUser($username,$phone,$genre,$bio,$audition){
+    global $db;
+    $query = 'UPDATE users
+    SET phone = :phone, genre = :genre, bio = :bio, audition = :audition
+    WHERE username = :username';
+    $statement = $db->prepare($query);
+    $statement->bindValue(":username", $username);
+    $statement->bindValue(":phone", $phone);
+    $statement->bindValue(":genre", $genre);
+    $statement->bindValue(":bio", $bio);
+    $statement->bindValue(":audition", $audition);
+    $statement->execute();
+    $statement->closeCursor();
+}
+
 function verifyLogin($username){
     global $db;
     $query = 'SELECT * FROM users
@@ -610,20 +625,6 @@ function submitROLA($ticket,$issuedby,$winfo,$idate,$cid,$did,$phone,$email,$add
     $statement->bindValue(":billable5",$billable5);
     $statement->execute();
     $statement->closeCursor();
-}
-
-function updateUser($user_id,$password,$email) {
-    global $db;
-    $query = 'UPDATE users
-            SET password = :password,email = :email
-            WHERE userId = :user_id';
-    $statement = $db->prepare($query);
-    $statement->bindValue(":user_id",$user_id);
-    $statement->bindValue(":password",$password);
-    $statement->bindValue(":email",$email);
-    $statement->execute();
-    $statement->closeCursor();
-               
 }
 
 ?>
