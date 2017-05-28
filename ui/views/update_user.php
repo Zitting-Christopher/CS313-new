@@ -48,7 +48,7 @@ $username = $_SESSION['auth_username'];
             </tr>
             <tr>
                 <td class="llview">Tell us about yourself: </td>
-                <td class="lview"><textarea name="user_about" value="<?php echo $user['bio']; ?>" required></textarea></td>
+                <td class="lview"><textarea name="user_about" required><?php echo $user['bio']; ?></textarea></td>
             </tr>
             <tr>
                 <td class="llview">Underdog Idols Audition link: </td>
