@@ -11,10 +11,10 @@ $bio = filter_input(INPUT_POST,'user_about');
 $audition = filter_input(INPUT_POST,'user_audvid',FILTER_SANITIZE_URL);
 
 ////Process Registration
-    if (isset($_POST['user_pass']))
+    if (isset($_POST['update']))
     { 
         //Update the user
-        updateUser($username,$phone,$genre,$bio,$audition);
+        updateUser($username,$phone,$genre,$bio,$audition)
 
         //Debugging tools
 //        print_r($_POST);
