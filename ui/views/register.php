@@ -33,7 +33,7 @@ $audition = filter_input(INPUT_POST,'user_audvid',FILTER_SANITIZE_URL);
         {
             $specchars = array('!','@','#','$','%','^','&','*','-','+','-','=','~','`','<','>',',','.','?','/',';',':');
                 
-            if(strlen($vpass) < 7 || strtoupper($vpass) == $vpass || strtolower($vpass) == $vpass || strpos_arr($vpass,$specchars) == false)
+            if(strlen($vpass) < 8 || strtoupper($vpass) == $vpass || strtolower($vpass) == $vpass || strpos_arr($vpass,$specchars) == false)
             {
                 //Notify the user what happened
                 echo '<br><div class="msg">The password you provided does not meet the requirements. Please try again.</div><br>';
@@ -214,7 +214,7 @@ else
         </tr>
         <tr>
             <td class="llview">Password: </td>
-            <td class="lview"><input type="password" name="user_pass" placeholder="Enter password" required></td>
+            <td class="lview"><input type="password" name="user_pass" placeholder="Reqs: 1 upper, 1 lower, 1 spec char, 8 chars" required></td>
         </tr>
         <tr>
             <td class="llview">Verify Password: </td>
