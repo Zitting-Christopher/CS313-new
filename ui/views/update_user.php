@@ -14,7 +14,7 @@ $audition = filter_input(INPUT_POST,'user_audvid',FILTER_SANITIZE_URL);
     if (isset($_POST['update']))
     { 
         //Update the user
-        updateUser($username,$phone,$genre,$bio,$audition)
+        updateUser($username,$phone,$genre,$bio,$audition);
 
         //Debugging tools
 //        print_r($_POST);
